@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Color Guessing Game</title>
+		<meta name="Author" content="Vidit Maheshwari">
+		<!-- Add JS Library-->
+	</head>
+	<body onload="do_game()">
+	
+	
+		<!-- Here you add java script-->
+		<script >
+			var target;
+			var color = ["blue", "cyan", "gray", "green", "magenta", "orange", "red", "white", "yellow"].sort();
+			var guess_input_text;
+			var guess_input;
+			var finished = false;
+			var guesses = 0;
+			
+			function do_game() {
+				var random_color = color[Math.floor(Math.random() * color.length)]; // Get a Random value from array
+				target = random_color;
+				alert("Random color is " + target);
+				while (!finished)
+				{
+					guess_input = prompt("I am thinking of one of these colors:- \n\n" + 
+												   color.join(", ") + 
+												  ".\n\nWhat color am I thinking of?");
+					guesses += 1;
+					finished = check_guess(guess_input);
+					
+				}
+			}
+			function check_guess(guess_input)
+			{
+				if(color.indexOf(guess_input)< 0)
+				{
+					alert("I don`t recognize that color!");
+					return false;
+				}
+				
+				if(guess_input > target)
+				{
+					alert("Your input is alphabetically higher than mine!");
+					return false;
+				}
+				
+				if(guess_input < target)
+				{
+					alert("Your input is alphabetically lower than mine!");
+					return false;
+				}
+					
+				if( guess_input === target)
+				{
+					changeBgColorTo(target);
+					alert("You have guessed my color, Right. Congratulations! \n\n" + 
+							"You took " + guesses + " to guess the right color");
+					return true;	
+				}
+			}
+			
+			function changeBgColorTo(colorName)
+			{
+				myBody=document.getElementsByTagName("body")[0];
+				myBody.style.background=colorName;
+			}
+		</script>
+	</body>
+</html>

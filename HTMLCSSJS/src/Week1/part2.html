@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Assignment: Dating Web Site Assessment </title>
+		<meta name="Author" content="Vidit Maheshwari">
+		<style>
+			fieldset {background:lightyellow; border:10px solid yellow; margin-bottom:10px; width:720px}
+			label {width:180px; display:inline-block; text-align:right; vertical-align:top}
+			textarea {width:360px;height:50px}
+			span {background:brown; color:white; text-align:center}
+		</style>
+	</head>
+	<body>
+	<h1>Please Enter Your Details For Our Dating Website</h1>
+	<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Your Face</legend>
+			<label for="avatar">Your image: </label><input type="file" name="fileUpload" required><br>
+			<label for="avatarIs">Image preview: </label><img src="" id="preview" >
+		</fieldset> <br>
+		<fieldset>
+			<legend>Your General Details</legend>
+			<label for="avatarName">Name: </label><input type="text" name="UserName" placeholder="Your full name" required><br>
+			<label for="avatargender">Gender: </label><input type="radio" name="gender" value="Male" width="auto"> Male <input type="radio" name="gender" value="Female" width="auto"> Female<br>
+			<label for="avatarAge">Age: </label><input type="number" name="userAge" required><br>
+			<label for="avatarDOB">Date of Birth: </label><input type="date" name="DOB"><br>
+			<label for="avatarColor">Favorite Color: </label><input type="color" name="favColor"><br>
+			<label for="avatarCountry">Which Country: </label><select name="cities">
+							<option value="india">India</option>
+							<option value="netherlands">Netherlands</option>
+							<option value="germany">Germany</option>
+							<option value="italy">Italy</option>
+							<option value="Czech">Czech Republic</option>
+							<option value="denmark">Denmark</option>
+						  </select>
+		</fieldset> <br>
+		<fieldset>
+			<legend>Your Indicators</legend>
+			<label for="avatarHeight">Height:  </label><span >Short</span><input type="range" min="0" max="100" step="5" value="50" name="height"><span>Tall</span><br>
+			<label for="avatarSalary">Salary:  </label><span >Poor</span><input type="range" min="0" max="100" step="2" value="50" name="salary"><span>Rich</span><br>
+		</fieldset> <br>
+		<fieldset>
+			<legend>Your Contact Information</legend>
+			<label for="avatarEmail">Email: </label><input type="email" name="email" required><br>
+			<label for="avatarMobile">Mobile: </label><input type="tel" name="mobile"><br>
+			<label for="avatarAddress">Address: </label><textarea row="3" col="100" name="address"></textarea><br>
+			<label for="avatarMOC">Method to Contact: </label><input type="checkbox" name="contactMethod" value="vaiEmail" width="auto">Email
+								<input type="checkbox" name="contactMethod" value="viaMobile" width="auto">Mobile
+								<input type="checkbox" name="contactMethod" value="vaiAddressAddress" width="auto">Address
+			<br>
+		</fieldset> <br>
+		<input type="submit" value="Submit">
+	<form>
+	</body>
+</html>
