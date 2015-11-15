@@ -10,10 +10,13 @@
          content must come *after* these tags -->
     <title>Ristorante Con Fusion</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
     <link href="css/mystyles.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
     <link href="css/bootstrap-social.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -121,78 +124,85 @@
             </div>
         </div>
         <div id="reservationModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-           <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title" style="Color:#000"><strong>Reserve A Table </strong></h4>
-                </div>
-                <div class="modal-body" style="Color:#000">
-                    <form class="form-inline" role="form" id="reservationForm">
-                    <p style="padding:10px;">
-                    <div class="form-group ">
-                        <label for="firstname" class="col-sm-4 control-label" >Number of Guest</label>
-                        <div class="col-sm-8" style="Color:#000">
-                            <label class="radio-inline"><input type="radio" name="numberOfGuest">1</label>
-                            <label class="radio-inline"><input type="radio" name="numberOfGuest">2</label>
-                            <label class="radio-inline"><input type="radio" name="numberOfGuest">3</label>
-                            <label class="radio-inline"><input type="radio" name="numberOfGuest">4</label>
-                            <label class="radio-inline"><input type="radio" name="numberOfGuest">5</label>
-                            <label class="radio-inline"><input type="radio" name="numberOfGuest">6</label>
-                        </div>
+            <div class="modal-dialog">
+               <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="Color:#000"><strong>Reserve A Table </strong></h4>
                     </div>
-                    <p style="paddingL10px">
-                    <div class="form-group">
-                        <div class="btn-group" data-toggle="buttons">
-                            <label for="firstname" class="col-sm-4 control-label" >Selection</label>
-                            <label class="btn btn-success active col-sm-5">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked>Non-Smoking
-                            </label>
-                            <label class="btn btn-danger col-sm-3">
-                                <input type="radio" name="options" id="option2" autocomplete="off">Somking
-                            </label>
-                        </div>
-                    </div>
-                    <p style="padding:10px;">
-                    <div class="form-group">
-                        <label for="firstname" class="col-sm-3 control-label">Date & Time</label>
-                        <div class="col-sm-4">
-                            <div class='input-group date' id='datetimepicker1'>
-                                <input type='text' class="form-control" placeholder="Date"/>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
+                    <div class="modal-body" style="Color:#000">
+                        <form class="form-inline" role="form" id="reservationForm">
+                            <p style="padding:10px;"/>
+                            <div class="form-group ">
+                                <div class="col-sm-4">
+                                    <label for="firstname" class="control-label" >Number of Guest</label>
+                                </div>
+                                <div class="col-sm-8" style="Color:#000">
+                                    <label class="radio-inline"><input type="radio" name="numberOfGuest">1</label>
+                                    <label class="radio-inline"><input type="radio" name="numberOfGuest">2</label>
+                                    <label class="radio-inline"><input type="radio" name="numberOfGuest">3</label>
+                                    <label class="radio-inline"><input type="radio" name="numberOfGuest">4</label>
+                                    <label class="radio-inline"><input type="radio" name="numberOfGuest">5</label>
+                                    <label class="radio-inline"><input type="radio" name="numberOfGuest">6</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class='input-group date' id='datetimepicker1'>
-                                <input type='text' class="form-control" placeholder="Date"/>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-time"></span>
-                                </span>
+                            <div class="form-group">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <div class="col-sm-3">
+                                        <label for="firstname" class="control-label" >Selection</label>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <label class="btn btn-success active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked>Non-Smoking
+                                        </label>
+                                        <label class="btn btn-danger">
+                                            <input type="radio" name="options" id="option2" autocomplete="off">Somking
+                                        </label>
+                                    <div>
+                                </div>
                             </div>
-                        </div>
+                            <p style="padding:10px;"/>
+                            <div class="form-group">
+                                <div class="col-sm-3">
+                                    <label for="firstname" class="control-label">Date & Time</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" placeholder="Date"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" placeholder="Date"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-time"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p style="padding:10px;"/>
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-2 control-label"> </label>
+                                <input type="submit" class="btn btn-primary btn-md" value="Reserve">
+                            </div>
+                            <button type="button" class="btn btn-warning btn-md"
+                                    data-dismiss="modal">Cancel</button>
+                            <p style="padding:10px;"/>
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <strong>Warning!</strong> Please <a href="tel:+852 1234 5678" class="alert-link">Call</a> us to reserve for more than six guests.
+                            </div>
+                        </form>
                     </div>
-                    <p style="padding:10px;">
-                    <div class="form-group">
-                        <label for="firstname" class="col-sm-2 control-label"> </label>
-                        <input type="submit" class="btn btn-primary btn-md" value="Reserve">
-                    </div>
-                    <button type="button" class="btn btn-warning btn-md"
-                            data-dismiss="modal">Cancel</button>
-                    <p style="padding:10px;">
-                    <div class="alert alert-warning alert-dismissible" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <strong>Warning!</strong> Please <a href="tel:+852 1234 5678" class="alert-link">Call</a> us to reserve for more than six guests.
-                </div>
-                </form>
                 </div>
             </div>
         </div>
-    </div>
     </header>
     <div class="container">
         <div class="row row-content">
@@ -252,6 +262,14 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <div class="btn-group" id="carouselButtons">
+                        <button class="btn btn-danger btn-xs" id="carousel-pause">
+                            <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                        </button>
+                        <button class="btn btn-danger btn-xs" id="carousel-play">
+                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
        </div>
@@ -374,15 +392,25 @@
         </div>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
          });
     </script>
-
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+                          $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+                        $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
+    </script>
 </body>
 
 </html>
